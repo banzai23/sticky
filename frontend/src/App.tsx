@@ -1,6 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { SimpleGrid, LoadingOverlay } from "@mantine/core";
+import React from "react"
+import { useState, useEffect } from "react"
+import { SimpleGrid, LoadingOverlay } from "@mantine/core"
 
 type Sticky = {
     author: string
@@ -37,16 +37,16 @@ function App() {
         return (<LoadingOverlay visible={loading}/>);
     } else {
         return (
-            <SimpleGrid cols={3}>
-                <div>{sticky[0].author} + {sticky[0].body}</div>
-                <div>{sticky[1].author} + {sticky[1].body}</div>
-                <div>{sticky[2].author} + {sticky[2].body}</div>
-                <div>{sticky[3].author} + {sticky[3].body}</div>
-                <div>{sticky[4].author} + {sticky[4].body}</div>
-                <div>{sticky[5].author} + {sticky[5].body}</div>
-                <div>{sticky[6].author} + {sticky[6].body}</div>
-                <div>{sticky[7].author} + {sticky[7].body}</div>
-                <div>{sticky[8].author} + {sticky[8].body}</div>
+            <SimpleGrid cols={3} className="stickyGrid">
+                <div className="stickyDiv">input: enter name<br/><br/>input: enter text</div>
+                <div className="stickyDiv">{sticky[0].author}<br/><br/>{sticky[0].body}</div>
+                <div className="stickyDiv">{sticky[1].author}<br/><br/>{sticky[1].body}</div>
+                <div className="stickyDiv">{sticky[2].author}<br/><br/>{sticky[2].body}</div>
+                <div className="stickyDiv">{sticky[3].author}<br/><br/>{sticky[3].body}</div>
+                <div className="stickyDiv">{sticky[4].author}<br/><br/>{sticky[4].body}</div>
+                <div className="stickyDiv">{sticky[5].author}<br/><br/>{sticky[5].body}</div>
+                <div className="stickyDiv">{sticky[6].author}<br/><br/>{sticky[6].body}</div>
+                <div className="stickyDiv">{sticky[7].author}<br/><br/>{sticky[7].body}</div>
             </SimpleGrid>
         );
     }
